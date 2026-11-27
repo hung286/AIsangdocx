@@ -3043,44 +3043,10 @@ function Z() {
             animate: { opacity: 1, y: 0 },
             transition: { duration: 0.45 },
             children: [
-              e.jsxs("div", {
+              e.jsx("div", {
                 className: "nd30-back-bar",
-                style: { display: "flex", flexWrap: "wrap", gap: "8px", justifyContent: "center", marginBottom: "18px" },
-                children: [
-                  e.jsx("button", {
-                    className: "nd30-back nd30-back-primary",
-                    style: { background: "linear-gradient(135deg, #4f46e5, #6366f1)", border: "1.5px solid #a5b4fc", color: "#fff", fontWeight: "700", boxShadow: "0 4px 14px rgba(79,70,229,0.35)", position: "static" },
-                    onClick: function() {
-                      try {
-                        if (d) {
-                          sessionStorage.setItem("smartedu_paste_ai_prefill", d);
-                          localStorage.setItem("smartedu_paste_ai_prefill", d);
-                          localStorage.setItem("toan_docx_saved_markdown", d);
-                        }
-                        if (imageMap) {
-                          const im = JSON.stringify(imageMap);
-                          sessionStorage.setItem("smartedu_paste_ai_prefill_images", im);
-                          localStorage.setItem("smartedu_paste_ai_prefill_images", im);
-                          localStorage.setItem("toan_docx_saved_images", im);
-                        }
-                      } catch(e) {}
-                      window.location.href = "/ai-tools/toan-markdown-docx/index.html";
-                    },
-                    children: "📐 Quay lại Trợ lý AI Soạn Đề Thi (Toán · KHTN · Lí · Hóa) → Markdown & DOCX"
-                  }),
-                  e.jsx("button", {
-                    className: "nd30-back nd30-back-mathviz",
-                    style: { background: "rgba(255,255,255,0.22)", border: "1px solid rgba(255,255,255,0.4)", color: "#fff", fontWeight: "600", position: "static" },
-                    onClick: function() { window.location.href = "/ai-tools/mathviz-studio/index.html"; },
-                    children: "🎨 Quay lại MathViz Studio"
-                  }),
-                  e.jsx("button", {
-                    className: "nd30-back nd30-back-tienich",
-                    style: { background: "rgba(255,255,255,0.12)", border: "1px solid rgba(255,255,255,0.25)", color: "#e2e8f0", position: "static" },
-                    onClick: function() { k("/tien-ich-giao-duc"); },
-                    children: "← Tiện ích GD"
-                  })
-                ]
+                style: { display: "flex", justifyContent: "center", marginBottom: "14px", fontSize: "1.1rem", fontWeight: "700", color: "#fff" },
+                children: "hi hi hi"
               }),
               e.jsx("h1", {
                 className: "nd30-hero-title",
