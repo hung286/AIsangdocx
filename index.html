@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chuyển đổi AI sang DOCX &amp; Add-in Word MH 2026</title>
+  <link rel="stylesheet" href="./assets/katex.min.css" onerror="this.onerror=null;this.href='https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css'" />
+  <link rel="stylesheet" href="./PasteAiPage.css" />
+  <style>
+    body { margin: 0; font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; background: #f8fafc; color: #0f172a; }
+    .top-bar {
+      background: linear-gradient(135deg, #1e1b4b, #312e81);
+      color: #fff;
+      padding: 10px 20px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      position: sticky;
+      top: 0;
+      z-index: 9999;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }
+    .top-bar-title { font-weight: 800; font-size: 15px; display: flex; align-items: center; gap: 8px; }
+    .top-bar-actions { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+    .top-btn {
+      text-decoration: none;
+      font-size: 12px;
+      font-weight: 700;
+      padding: 7px 13px;
+      border-radius: 8px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: opacity 0.15s;
+    }
+    .top-btn:hover { opacity: 0.9; }
+    .top-btn-green { background: #059669; color: #fff; }
+    .top-btn-ghost { background: rgba(255,255,255,0.14); color: #fff; border: 1px solid rgba(255,255,255,0.28); }
+  </style>
+  <script src="./assets/katex.min.js" onerror="this.onerror=null;this.src='https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js'"></script>
+  <script src="./assets/jszip.min.js" onerror="this.onerror=null;this.src='https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js'"></script>
+  <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
+</head>
+<body>
+  <header class="top-bar">
+    <div class="top-bar-title">
+      <span>📋</span>
+      <span>Chuyển đổi AI sang DOCX · Add-in Word MH 2026</span>
+    </div>
+    <div class="top-bar-actions">
+      <a class="top-btn top-btn-green" href="./addin/Cai_Dat_Addin_Word_MH2026.exe" download>📥 Tải Add-in Word MH 2026 (.exe)</a>
+      <a class="top-btn top-btn-ghost" href="./addin/MH2026.dotm" download>📄 Tải File MH2026.dotm</a>
+      <a class="top-btn top-btn-ghost" href="./addin/Cap_Nhat_Addin_Vao_Word.bat" download>⚙️ File .bat cập nhật nhanh</a>
+    </div>
+  </header>
+
+  <div id="root"></div>
+
+  <script type="module">
+    import PasteAiPage from "./app.js";
+    const rootEl = document.getElementById("root");
+    if (rootEl && window.React && window.ReactDOM) {
+      window.ReactDOM.createRoot(rootEl).render(window.React.createElement(PasteAiPage));
+    }
+  </script>
+</body>
+</html>
